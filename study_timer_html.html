@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Timer - Pomodoro App</title>
+    <link rel="stylesheet" href="study_timer_css.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Study Timer</h1>
+        <p>Stay focused and productive!</p>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- Timer Display Section -->
+        <div class="timer-display">
+            <div id="timer">25:00</div>
+        </div>
+
+        <!-- Session Type Selection -->
+        <div class="session-selection">
+            <h2>Session Type:</h2>
+            <div class="radio-group">
+                <label class="radio-label">
+                    <input type="radio" name="session" value="study" checked>
+                    <span>Study Session (25 min)</span>
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="session" value="short">
+                    <span>Short Break (5 min)</span>
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="session" value="long">
+                    <span>Long Break (15 min)</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Control Buttons -->
+        <div class="controls">
+            <button id="startBtn" class="btn btn-start">START</button>
+            <button id="pauseBtn" class="btn btn-pause" disabled>PAUSE</button>
+            <button id="resetBtn" class="btn btn-reset">RESET</button>
+        </div>
+
+        <!-- Task Input Section -->
+        <div class="task-section">
+            <label for="taskInput">Current Task:</label>
+            <input type="text" id="taskInput" placeholder="Enter what you're working on..." maxlength="50">
+        </div>
+
+        <!-- Statistics Display -->
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label">Sessions Today:</span>
+                <span id="sessionCount" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Total Focus Time:</span>
+                <span id="totalTime" class="stat-value">0 min</span>
+            </div>
+        </div>
+
+        <!-- Session Log -->
+        <div class="session-log">
+            <h2>Completed Sessions Today:</h2>
+            <div id="logContainer" class="log-container">
+                <p class="empty-message">No sessions completed yet. Start your first session!</p>
+            </div>
+        </div>
+
+        <!-- Clear Log Button -->
+        <div class="clear-section">
+            <button id="clearLogBtn" class="btn btn-clear">Clear All Sessions</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Study Timer App | Ani Andhole</p>
+    </footer>
+
+    <script src="study_timer_js.js"></script>
+</body>
+</html>
